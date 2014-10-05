@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="40dp">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="35"
+        android:layout_marginTop="-30dp"/>
+
+    <LinearLayout
+        android:layout_height="0dip"
+        android:layout_width="fill_parent"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        >
+
+
+        <RadioGroup
+            android:id="@+id/colorButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+            <RadioButton
+                android:id="@+id/color0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/circle_dkbrown"
+                />
+
+            <RadioButton
+                android:id="@+id/color1"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/circle_ltbrown"
+                />
+
+            <RadioButton
+                android:id="@+id/color2"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/circle_green"
+                />
+
+            <RadioButton
+                android:id="@+id/color3"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/circle_black"
+                />
+
+            <RadioButton
+                android:id="@+id/color4"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/circle_yellow"
+                />
+
+            <RadioButton
+                android:id="@+id/color5"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/circle_red"
+                />
+
+        </RadioGroup>
+
+
+
+
+        <RadioGroup
+            android:id="@+id/sizeButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <RadioButton
+                android:id="@+id/size0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/size_icon"
+                android:button="@android:color/transparent"
+                android:padding="10dp"
+                />
+
+            <RadioButton
+                android:id="@+id/size1"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/size_icon"
+                android:button="@android:color/transparent"
+                android:padding="10dp"
+                />
+
+            <RadioButton
+                android:id="@+id/size2"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/size_icon"
+                android:button="@android:color/transparent"
+                android:padding="10dp"
+                />
+
+            <RadioButton
+                android:id="@+id/size3"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/size_icon"
+                android:button="@android:color/transparent"
+                android:padding="10dp"
+                />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/btn_tookashit"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

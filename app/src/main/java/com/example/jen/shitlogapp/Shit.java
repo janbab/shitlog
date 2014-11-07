@@ -11,16 +11,16 @@ public class Shit {
 
     private int _id;
     private Calendar _dateTime;
-    private int _type;
-    private int _color;
-    private int _size;
-    private int _pain;
-    private int _sickBefore;
-    private int _sickAfter;
+    private int _type = -1;
+    private String _color;
+    private int _size = -1;
+    private int _pain = -1;
+    private int _sickBefore = -1;
+    private int _sickAfter = -1;
 
     public Shit() {}
 
-    public Shit(int id, Calendar dateTime, int type, int color, int size, int pain, int sickBefore, int sickAfter) {
+    public Shit(int id, Calendar dateTime, int type, String color, int size, int pain, int sickBefore, int sickAfter) {
         this._id = id;
         this._dateTime = dateTime;
         this._type = type;
@@ -31,7 +31,7 @@ public class Shit {
         this._sickAfter = sickAfter;
     }
 
-    public Shit(Calendar dateTime, int type, int color, int size, int pain, int sickBefore, int sickAfter) {
+    public Shit(Calendar dateTime, int type, String color, int size, int pain, int sickBefore, int sickAfter) {
         this._dateTime = dateTime;
         this._type = type;
         this._color = color;
@@ -62,10 +62,10 @@ public class Shit {
         this._type = type;
     }
 
-    public int getColor() {
+    public String getColor() {
         return this._color;
     }
-    public void setColor(int color) {
+    public void setColor(String color) {
         this._color = color;
     }
 

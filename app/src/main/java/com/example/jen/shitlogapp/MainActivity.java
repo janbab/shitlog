@@ -37,6 +37,14 @@ public class MainActivity extends FragmentActivity {
     public void publishShit() {
         DatabaseHandler dbHandler = new DatabaseHandler(this);
         dbHandler.addShit(currentShit);
+        printDatabase();
+    }
+    public void printDatabase() {
+        DatabaseHandler dbHandler = new DatabaseHandler(this);
+        System.out.println("Number of shits: " + dbHandler.getShitCount());
+        for (Shit shit : dbHandler.getAllShits()) {
+            System.out.println(shit);
+        }
     }
 
 	@Override
@@ -52,6 +60,8 @@ public class MainActivity extends FragmentActivity {
 
 		pageAdapter = new MyPageAdapter(getSupportFragmentManager(), fragments);
 		pager.setAdapter(pageAdapter);
+
+        printDatabase();
 	}
 
 	private List<Fragment> getFragments(){

@@ -40,11 +40,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + KEY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_DATETIME + " INTEGER,"
                 + KEY_TYPE + " INTEGER,"
-                + KEY_COLOR + " INTEGER,"
+                + KEY_COLOR + " TEXT,"
                 + KEY_SIZE + " INTEGER,"
                 + KEY_PAIN + " INTEGER,"
                 + KEY_SICKBEFORE + " INTEGER,"
-                + KEY_SICKAFTER + " INTEGER,"
+                + KEY_SICKAFTER + " INTEGER"
                 + ")";
         db.execSQL(CREATE_SHITS_TABLE);
     }
@@ -88,7 +88,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Integer.parseInt(cursor.getString(0)),
                 dateTime,
                 Integer.parseInt(cursor.getString(2)),
-                Integer.parseInt(cursor.getString(3)),
+                cursor.getString(3),
                 Integer.parseInt(cursor.getString(4)),
                 Integer.parseInt(cursor.getString(5)),
                 Integer.parseInt(cursor.getString(6)),
@@ -115,7 +115,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 shit.setDateTime(dateTime);
 
                 shit.setType(Integer.parseInt(cursor.getString(2)));
-                shit.setColor(Integer.parseInt(cursor.getString(3)));
+                shit.setColor(cursor.getString(3));
                 shit.setSize(Integer.parseInt(cursor.getString(4)));
                 shit.setPain(Integer.parseInt(cursor.getString(5)));
                 shit.setSickBefore(Integer.parseInt(cursor.getString(6)));
@@ -157,9 +157,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
+        int count = cursor.getCount();
         cursor.close();
 
-        return cursor.getCount();
+        return count;
     }
 
 }

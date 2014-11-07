@@ -146,6 +146,9 @@ public class Fragment_Appearance extends Fragment
                     ImageView bbb = adapter.getImageView(viewPager.getCurrentItem());
                     bbb.setColorFilter(Color.parseColor(colors[java.lang.Integer.parseInt(number)]), PorterDuff.Mode.MULTIPLY);
                 }
+
+                ((MainActivity) Fragment_Appearance.this.getActivity()).getCurrentShit().setColor(colors[java.lang.Integer.parseInt(number)]);
+                System.out.println(((MainActivity) Fragment_Appearance.this.getActivity()).getCurrentShit().toString());
             }
         });
 
@@ -163,6 +166,8 @@ public class Fragment_Appearance extends Fragment
                 ImageView bbb = adapter.getImageView(viewPager.getCurrentItem());
                 bbb.setColorFilter(Color.parseColor(colors[java.lang.Integer.parseInt(number)]), PorterDuff.Mode.MULTIPLY);
 
+                ((MainActivity) Fragment_Appearance.this.getActivity()).getCurrentShit().setType(i);
+                System.out.println(((MainActivity) Fragment_Appearance.this.getActivity()).getCurrentShit().toString());
             }
 
             @Override
@@ -184,6 +189,9 @@ public class Fragment_Appearance extends Fragment
                 layoutParams.width = width[num];
                 layoutParams.height = height[num];
                 bbb.setLayoutParams(layoutParams);
+
+                ((MainActivity) Fragment_Appearance.this.getActivity()).getCurrentShit().setSize(num);
+                System.out.println(((MainActivity) Fragment_Appearance.this.getActivity()).getCurrentShit().toString());
             }
         });
 

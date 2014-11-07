@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +63,27 @@ public class Fragment_Sick extends Fragment {
                     } else {
                         System.out.println("Unchecked");
                         painButton.getBackground().setColorFilter(Color.parseColor("#000000"), PorterDuff.Mode.SRC_IN);
+                    }
+                }
+            });
+        }
+
+
+        final List<View> allSickBeforeButtons = findAllViewsWithTag(layout, "sickBefore");
+        for (int i=0; i < allSickBeforeButtons.size(); i++) {
+            final CheckBox sickBeforeButton = (CheckBox)allSickBeforeButtons.get(i);
+            final int index = i;
+
+            sickBeforeButton.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(sickBeforeButton.isChecked()){
+                        for (int i=0; i < allSickBeforeButtons.size(); i++) {
+                            if (i != index) {
+                                CheckBox cb = (CheckBox)allSickBeforeButtons.get(i);
+                                cb.setChecked(false);
+                            }
+                        }
                     }
                 }
             });

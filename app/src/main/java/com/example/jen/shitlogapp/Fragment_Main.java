@@ -35,6 +35,8 @@ public class Fragment_Main extends Fragment {
 		btn_next.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
+                ((MainActivity) Fragment_Main.this.getActivity()).setCurrentShit(new Shit());
+
 				mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);
 			}
 		});

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -38,6 +39,13 @@ public class Fragment_Time extends Fragment {
         btn_next.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                final TimePicker timePicker = (TimePicker) Fragment_Time.this.getView().findViewById(R.id.timePicker1);
+                Calendar c = Calendar.getInstance();
+                c.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
+                c.set(Calendar.MINUTE, timePicker.getCurrentMinute());
+                ((MainActivity) Fragment_Time.this.getActivity()).getCurrentShit().setDateTime(c);
+                System.out.println(((MainActivity) Fragment_Time.this.getActivity()).getCurrentShit().toString());
+
                 mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);
             }
         });

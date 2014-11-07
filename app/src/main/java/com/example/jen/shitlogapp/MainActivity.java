@@ -1,6 +1,7 @@
 package com.example.jen.shitlogapp;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import android.app.Activity;
@@ -13,15 +14,31 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.roomorama.caldroid.CaldroidFragment;
+
 public class MainActivity extends FragmentActivity {
 	MyPageAdapter pageAdapter;
 	NonSwipeableViewPager pager;
+
+    private Shit currentShit;   // not for fags
+    public Shit getCurrentShit() {
+        return currentShit;
+    }
+    public Shit setCurrentShit(Shit shit) {
+        return this.currentShit = shit;
+    }
+    public void publishShit() {
+        DatabaseHandler dbHandler = new DatabaseHandler(this);
+        dbHandler.addShit(currentShit);
+    }
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,6 +75,14 @@ public class MainActivity extends FragmentActivity {
 		}
 		@Override
 		public Fragment getItem(int position) {
+//            CaldroidFragment caldroidFragment = new CaldroidFragment();
+//            Bundle args = new Bundle();
+//            Calendar cal = Calendar.getInstance();
+//            args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
+//            args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
+//            caldroidFragment.setArguments(args);
+//            return caldroidFragment;
+
 			return this.fragments.get(position);
 		}
 

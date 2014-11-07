@@ -34,6 +34,8 @@ public class Fragment_Confirm extends Fragment {
 		btn_next.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
+                ((MainActivity) Fragment_Confirm.this.getActivity()).publishShit();
+
 				mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1, true);
 			}
 		});

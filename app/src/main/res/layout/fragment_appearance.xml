@@ -30,6 +30,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="5dp"
+            android:gravity="center"
+
             >
             <RadioButton
                 android:id="@+id/color0"
@@ -95,60 +97,69 @@
 
 
 
-
-        <RadioGroup
-            android:id="@+id/sizeButtons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
             >
 
-            <RadioButton
-                android:id="@+id/size0"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/size_icon"
-                android:button="@android:color/transparent"
-                android:padding="10dp"
-                />
+            <RadioGroup
+                android:id="@+id/sizeButtons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                >
 
-            <RadioButton
-                android:id="@+id/size1"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/size_icon"
-                android:button="@android:color/transparent"
-                android:padding="10dp"
-                />
+                <RadioButton
+                    android:id="@+id/size0"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/size_icon"
+                    android:button="@android:color/transparent"
+                    android:layout_alignParentBottom="true"
+                    />
 
-            <RadioButton
-                android:id="@+id/size2"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@drawable/size_icon"
-                android:button="@android:color/transparent"
-                android:padding="10dp"
-                />
+                <RadioButton
+                    android:id="@+id/size1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/size_icon"
+                    android:button="@android:color/transparent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/size0"
+                    />
 
-            <RadioButton
-                android:id="@+id/size3"
-                android:layout_marginRight="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:background="@drawable/size_icon"
-                android:button="@android:color/transparent"
-                android:padding="10dp"
-                />
+                <RadioButton
+                    android:id="@+id/size2"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/size_icon"
+                    android:button="@android:color/transparent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/size1"
+                    />
 
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/size3"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/size_icon"
+                    android:button="@android:color/transparent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/size2"
+                    />
+
+         </RadioGroup>
+    </RelativeLayout>
 
 
     </LinearLayout>

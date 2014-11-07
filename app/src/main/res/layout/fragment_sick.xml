@@ -4,12 +4,24 @@
     >
 
     <LinearLayout
+        android:id="@+id/sickLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_marginLeft="10dp"
+            android:text="Any pain?"/>
+
+
         <LinearLayout
+            android:id="@+id/painLayout"
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:orientation="horizontal"
@@ -25,8 +37,9 @@
 
                 <CheckBox
                     android:id="@+id/pain0"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:tag="painButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:button="@android:color/transparent"
                     android:background="@drawable/ic_stabbing"
                     android:scaleType="fitXY"
@@ -50,8 +63,9 @@
 
                 <CheckBox
                     android:id="@+id/color1"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:tag="painButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:button="@android:color/transparent"
                     android:background="@drawable/ic_burning"
                     android:scaleType="fitXY"
@@ -70,12 +84,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginRight="10dp"                >
+                android:layout_marginRight="10dp"
+                >
 
                 <CheckBox
                     android:id="@+id/color2"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:tag="painButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:button="@android:color/transparent"
                     android:background="@drawable/ic_explosive"
                     android:scaleType="fitXY"
@@ -94,12 +110,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="20dp">
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2.5dp">
 
                 <CheckBox
                     android:id="@+id/color3"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:tag="painButton"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:button="@android:color/transparent"
                     android:background="@drawable/ic_straining"
                     android:scaleType="fitXY"
@@ -109,6 +127,263 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="straining"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_marginLeft="10dp"
+            android:text="Did you feel sick before?"/>
+
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/sick_before0"
+                    android:tag="sickBefore"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick0"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/sick_before1"
+                    android:tag="sickBefore"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick1"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a little"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/sick_before2"
+                    android:tag="sickBefore"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick2"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="some"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/sick_before3"
+                    android:tag="sickBefore"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick3"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a lot"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_marginLeft="10dp"
+            android:text="Do you feel sick after?"/>
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/sick_after0"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick0"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/sick_after1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick1"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a little"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/sick_after2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick2"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="some"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/sick_after3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/sick3"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a lot"
                     android:layout_gravity="center"
                     />
 
